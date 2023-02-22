@@ -15,9 +15,26 @@ if($idade >=18){
 
 echo "<br>";
 
+
 //TERNÁRIO CONDICIONAL - (condição)?resultado positivo : resutado negativo
 
 echo ($idade < 18) ? "Sim" : "Não";
+
+echo "<br>";
+
+
+//NULL CAO(7.4) CONDICIONAL 
+
+$nome = "Sara ";
+$sobrenome = "Santos";
+
+
+$nomeCompleto = $nome;
+$nomeCompleto .= $sobrenome ?? '';
+
+echo $nomeCompleto;
+
+
 
 
 
