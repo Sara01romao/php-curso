@@ -33,9 +33,20 @@ $nomeCompleto = $nome;
 $nomeCompleto .= $sobrenome ?? '';
 
 echo $nomeCompleto;
+echo "<br>";
 
+//Switch
 
+$tipo = 'texto';
 
+switch($tipo){
+    case 'foto':
+        echo "Exibindo foto";
+        break;
+    case 'texto':
+         echo "Exibindo foto";
+         break;
+}
 
 
 
