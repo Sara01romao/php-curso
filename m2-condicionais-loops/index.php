@@ -47,6 +47,22 @@ switch($tipo){
          echo "Exibindo foto";
          break;
 }
+echo "<br>";
+/*-------------------------------------------------------------- */
+
+//LOOPS
+
+$numero = 5;
+
+while($numero < 8){
+    echo $numero;
+    echo "<br>";
+
+    $numero += 1;
+
+
+}
+
 
 
 
