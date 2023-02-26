@@ -54,6 +54,7 @@ echo "<br>";
 
 $numero = 5;
 
+//WHILE
 while($numero < 8){
     echo $numero;
     echo "<br>";
@@ -62,7 +63,33 @@ while($numero < 8){
 
 
 }
+echo "<br>";
 
+
+//FOR
+
+for ($numero = 0; $numero < 5; $numero++){
+    echo $numero;
+    echo "<br>";
+}
+
+
+
+//FOREACH
+
+    $alimentos = ["uva", "pão", "ovo"];
+
+    foreach($alimentos as $alimento){
+        echo $alimento;
+        echo "<br>";
+
+    }
+
+    foreach($alimentos as $chave => $alimento){
+        echo "$chave $alimento";
+        echo "<br>";
+
+    }
 
 
 
