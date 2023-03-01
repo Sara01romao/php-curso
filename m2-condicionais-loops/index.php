@@ -85,6 +85,8 @@ for ($numero = 0; $numero < 5; $numero++){
 
     }
 
+
+    //com a posição no array
     foreach($alimentos as $chave => $alimento){
         echo "$chave $alimento";
         echo "<br>";
