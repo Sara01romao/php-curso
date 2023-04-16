@@ -38,4 +38,12 @@ function soma2($n1, $n2, $n3=0){
 $soma2Resultado= soma2(1, 2);
 echo $soma2Resultado;
 
+
+
+//funções flecha (Arrow)
+
+$cdb = fn($valor) => $valor + 82;
+
+echo $cdb(10);
+
 ?>
