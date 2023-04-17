@@ -11,6 +11,11 @@
    <br>
    <br>
 
+   <label for="">Email</label>
+   <input type="text" name="email">
+   <br>
+   <br>
+
    <input type="submit" value="Enviar">
 
 
