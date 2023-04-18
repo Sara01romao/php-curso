@@ -1,4 +1,14 @@
+<?php
+session_start();
 
+if($_SESSION['aviso']){
+   echo $_SESSION['aviso']; //mostra aviso
+
+   $_SESSION['aviso']= ''; //limpa
+
+
+}
+?>
 
 <form method="POST" action="recebedor.php">
    <label for="">Nome</label>
