@@ -1,4 +1,5 @@
 <?php
+
 session_start();//salva informações para usar na página html
 
 
