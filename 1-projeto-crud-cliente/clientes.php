@@ -52,10 +52,7 @@ echo $num_clientes. "fdsffd";
                     //formatar o telefone para mostrar
                     $telefone = "Não informado.";
                     if(!empty($cliente['telefone'])){
-                        $ddd = substr($cliente['telefone'], 0, 2); //começa no 0 até o dois
-                        $parte1 = substr($cliente['telefone'], 2, 5);;//do 2 ate o 5
-                        $parte2= substr($cliente['telefone'], 7);//7 em diante
-                        $telefone ="($ddd) $parte1 - $parte2";
+                        $telefone = formatar_telefone($cliente['telefone']);
                     }
 
 
@@ -64,7 +61,7 @@ echo $num_clientes. "fdsffd";
                     $nascimento = "Não informado";
 
                     if(!empty($cliente['data_nascimento'])){
-                        $nascimento = implode('/', array_reverse(explode('-', $cliente['data_nascimento'])));
+                        $nascimento = formatar_data($cliente['data_nascimento']);
                     }
 
                     //formata datetime
