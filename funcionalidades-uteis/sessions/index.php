@@ -1,15 +1,5 @@
+<!DOCTYPE html>
 <?php
-
-if(!isset($_SESSION)){
-    session_start();
-}
-
-if(!isset($_SESSION['usuario'])){
-    die('Voce não esta logado. <a href="login.php">Clique aqui </a> para logar');
-}
-
-
-
 if(isset($_POST['email'])){
 
   include('conexao.php');
@@ -21,6 +11,9 @@ if(isset($_POST['email'])){
 
 
 }
+
+
+
 
 ?>
 
@@ -36,10 +29,11 @@ if(isset($_POST['email'])){
 </head>
 <body>
     
+    <h1> Casatro de usuarios</h1>
     <form action="index.php" method="post">
         <input type="text" name="email"><br><br>
         <input type="text" name="senha">
-        <button type="submit">Cadastrar Senha</button>
+        <button type="submit">Cadastrar Senha</button><br>
     </form>
 
 </body>

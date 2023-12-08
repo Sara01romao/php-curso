@@ -20,7 +20,17 @@ if(isset($_POST['email'])){
   $usuario = $sql_exec->fetch_assoc();
 
     if(password_verify($senha, $usuario['senha'])){
-        echo "Usuario logado!";
+
+        if(!isset($_SESSION)){
+            session_start();
+
+            $_SESSION['usuario'] = $usuario;
+
+            header("Location: index.php");
+
+            // echo "Usuario logado!";
+        }
+       
     }else{
         echo "Falha ao logar! Senha ou e-mail incorretos";
     }
