@@ -16,31 +16,42 @@ if(isset($_FILES['arquivo'])){
         var_dump($_FILES['arquivo']);
         
         die("Arquivo muito grande !! Max: 2MB");
-
+    }
        
-    }else{
+    
        
         //pasta para salvar o arquivo, usara a função uniquid para criar nome unico para o arquivo
-        $pasta = "arquivo/"; //local para salvar arquivo
+        $pasta = "arquivos/"; //local para salvar arquivo
         $nomeDoArquivo = $arquivo['name'];
         $novoNomeDoArquivo= uniqid(); //nome unico
 
+       
         
         $extensao = strtolower(pathinfo($nomeDoArquivo, PATHINFO_EXTENSION)); //extensao do arquivo
         //strtolower converte para minusculas
         
 
-        if($extensao != "jpg" && $extensao != 'png'){
-            die("Tipo de arquivo não aceito");
-        }
+         if($extensao != "jpg" && $extensao != 'png'){
+             die("Tipo de arquivo não aceito");
+         }
 
-        $deu_certo = move_uploaded_file($arquivo["tmp_name"], $pasta . $novoNomeDoArquivo . "." . $extensao);
+         $deu_certo = move_uploaded_file($arquivo["tmp_name"], $pasta . $novoNomeDoArquivo . "." . $extensao);
+
+         echo "Deu certo "."------" . var_dump($deu_certo). $nomeDoArquivo ;
+         echo "<br> <br>";
         
+        if($deu_certo)
+            echo "<p>Arquivo enviado com sucesso! </p>"
+        
+        //Para acessar-lo, <a href="\arquivo/$nomeDoArquivo.$extensao\" target=\"_blank\">Clique aqui</a></p>"
+        //  }else{
+        //      echo "erro ao enviar";
+        // }
 
-        var_dump($_FILES['arquivo']);
-        echo "Arquivo enviado";
+         var_dump($_FILES['arquivo']);
+         echo "Arquivo enviado";
 
-    }
+    
 
      
 
