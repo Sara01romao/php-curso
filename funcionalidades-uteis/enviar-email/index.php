@@ -1,10 +1,12 @@
 <?php
 
 
-//Senha: mc0BfI9*mm<
-//Email: teste@zerobugs.com.br
-//Host: smtp.zerobugs.com.br
-//porta:587
+//Senha: 
+//Email: 
+//Host: 
+//porta:
+
+//criar email temporario site Mohmail
 
 //pesquisar pelos tipos de email que quer enviar exemplo: outlook phpmailer config
 
